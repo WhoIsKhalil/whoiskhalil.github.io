@@ -8,8 +8,8 @@ var player;
     frame.setAttribute('height', Math.floor(frame.clientWidth * .6));
 
     cookieConsent.addEventListener('click', () => {
-        //player.seekTo(0);
-        //player.unMute();
+        player.seekTo(0);
+        player.unMute();
     });
 
     function onYouTubeIframeAPIReady() {
@@ -20,12 +20,8 @@ var player;
 
 
  function hide() {
-    /*setTimeout(function (){  // delay for video to start
+    setTimeout(function (){  // delay for video to start
         const overlay= document.getElementById('permission');
         overlay.style.display = 'none';
-     }, 500);*/
-     let emulatorData = '<div>TEST</div>';
-        let blob = new Blob([emulatorData], { type: 'text/html' });
-        let _url = window.URL.createObjectURL(blob);
-        window.open(_url, '_blank');
+     }, 500);
 }
