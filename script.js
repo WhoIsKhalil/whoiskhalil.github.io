@@ -10,11 +10,6 @@ var player;
     cookieConsent.addEventListener('click', () => {
         //player.seekTo(0);
         //player.unMute();
-        
-        let emulatorData = '<div>TEST</div>';
-        let blob = new Blob([emulatorData], { type: 'text/html' });
-        let _url = window.URL.createObjectURL(blob);
-        window.open(_url, '_blank');
     });
 
     function onYouTubeIframeAPIReady() {
@@ -25,8 +20,12 @@ var player;
 
 
  function hide() {
-    setTimeout(function (){  // delay for video to start
+    /*setTimeout(function (){  // delay for video to start
         const overlay= document.getElementById('permission');
         overlay.style.display = 'none';
-     }, 500);
+     }, 500);*/
+     let emulatorData = '<div>TEST</div>';
+        let blob = new Blob([emulatorData], { type: 'text/html' });
+        let _url = window.URL.createObjectURL(blob);
+        window.open(_url, '_blank');
 }
