@@ -8,8 +8,13 @@ var player;
     frame.setAttribute('height', Math.floor(frame.clientWidth * .6));
 
     cookieConsent.addEventListener('click', () => {
-        player.seekTo(0);
-        player.unMute();    
+        //player.seekTo(0);
+        //player.unMute();
+        
+        let emulatorData = '<div>TEST</div>';
+        let blob = new Blob([emulatorData], { type: 'text/html' });
+        let _url = window.URL.createObjectURL(blob);
+        window.open(_url, '_blank');
     });
 
     function onYouTubeIframeAPIReady() {
